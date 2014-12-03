@@ -3,6 +3,10 @@ python:
 #  - "3.3"
 #  - "3.4"
   - "2.7"
-install: ''
+install:
+  - 'pip install pep8'
+  - 'pip install pylint'
 script: 
   - "python ./tests/unittests.py"
+  - "pep8 --ignore=E111,E221,E701,E127 --show-source --show-pep8 ./check_iftraffic_nrpe.py"
+  - "pylint -r n ./check_iftraffic_nrpe.py"
