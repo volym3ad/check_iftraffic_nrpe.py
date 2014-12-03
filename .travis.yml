@@ -4,3 +4,5 @@ python:
 #  - "3.4"
   - "2.7"
 install: ''
+script: 
+  - "python ./tests/unittests.py"
