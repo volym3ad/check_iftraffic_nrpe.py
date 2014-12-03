@@ -9,6 +9,6 @@ install:
 before_script: 
   - "pep8 --ignore=E111,E221,E701,E127 --show-source --show-pep8 ./check_iftraffic_nrpe.py"
   - "pylint -r n ./check_iftraffic_nrpe.py; true"
-  - "pylint --disable=print-statement -E ./check_iftraffic_nrpe.py"
+  - "pylint --include-ids=y --disable=print-statement -E ./check_iftraffic_nrpe.py"
 script: 
   - "python ./tests/unittests.py"
